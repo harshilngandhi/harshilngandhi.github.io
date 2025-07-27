@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <h1 id="greeting"></h1>>Hi!</h1>
+  <h1 id="greeting">Hi!</h1>
   <div id="subheadings"></div>
 
   <script>
@@ -21,7 +21,11 @@
     const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
     document.getElementById("greeting").textContent = randomGreeting.text;
     const subheadingContainer = document.getElementById("subheadings");
-
+    randomGreeting.subs.forEach(sub => {
+      const h2 = document.createElement("h2");
+      h2.textContent = sub;
+      subheadingContainer.appendChild(h2);
+    });
   </script>
 </body>
 </html>
