@@ -20,8 +20,10 @@
 
     const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
     document.getElementById("greeting").textContent = randomGreeting.text;
-    const subheadingContainer = document.getElementById("subheadings");
+
     const randomSub = randomGreeting.subs[Math.floor(Math.random() * randomGreeting.subs.length)];
+    const subheadingContainer = document.getElementById("subheadings");
+
     const h2 = document.createElement("h2");
     h2.textContent = randomSub;
     subheadingContainer.appendChild(h2);
