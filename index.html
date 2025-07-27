@@ -18,6 +18,10 @@
       { text: "Howdy!", subs: ["This is my personal page", "Let’s build something awesome"] }
     ];
 
+    const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+    document.getElementById("greeting").textContent = randomGreeting.text;
+    const subheadingContainer = document.getElementById("subheadings");
+
   </script>
 </body>
 </html>
